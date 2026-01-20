@@ -1,7 +1,7 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import ProductsPage from "./pages/productsPage.jsx";
+import ProductsPage from "./pages/ProductsPage.jsx";
 import Layout from "./components/Layout.jsx";
 import Home from "./pages/HomePage.jsx";
 import CategoriesPage from "./pages/CategoriesPage.jsx";
