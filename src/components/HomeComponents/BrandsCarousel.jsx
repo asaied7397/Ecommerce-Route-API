@@ -133,7 +133,7 @@ export default function BrandsCarousel({
                       className="col-6 col-md-4 col-lg-2"
                     >
                       <Link
-                        to={`/brands/${b._id}`}
+                        to={`/products?brand=${encodeURIComponent(b._id || b.id)}`}
                         className="text-decoration-none"
                         aria-label={b.name}
                         title={b.name}
