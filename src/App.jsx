@@ -9,13 +9,13 @@ import BrandsPage from "./pages/BrandsPage.jsx";
 import CartPage from "./pages/CartPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import ProductDetailsPage from "./pages/ProductDetailsPage.jsx";
-import ProtectedRoute from "./components/ProtectedRoute.jsx";
+// import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import RegisterPage from "./pages/RegisterPage.jsx";
 
 function App() {
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
       element: <Layout />,
@@ -25,23 +25,23 @@ function App() {
           element: <Home />,
         },
         {
-          path: "/products",
+          path: "products",
           element: <ProductsPage />,
         },
         {
-          path: "/products/:id",
+          path: "products/:id",
           element: <ProductDetailsPage />,
         },
         {
-          path: "/categories",
+          path: "categories",
           element: <CategoriesPage />,
         },
         {
-          path: "/brands",
+          path: "brands",
           element: <BrandsPage />,
         },
         {
-          path: "/cart",
+          path: "cart",
           element: (
             // <ProtectedRoute>
             <CartPage />
@@ -49,11 +49,11 @@ function App() {
           ),
         },
         {
-          path: "/login",
+          path: "login",
           element: <LoginPage />,
         },
         {
-          path: "/register",
+          path: "register",
           element: <RegisterPage />,
         },
         {
